@@ -29,51 +29,63 @@ export default function Hero4() {
             width={274}
             height={482}
             className="absolute w-[274px] h-[382px] object-cover -left-[250px] top-0 "
-            /><Image 
+            />
+            
+            <Image 
             src={imag3} 
             alt="" 
             width={374}
             height={323}
-            className="absolute w-[374px] h-[323px] object-cover -left-[250px] bottom-[10px] "
-            /><Image 
+            className="absolute w-[374px] h-[323px] object-cover -left-[250px] bottom-[30px] "
+            />
+            
+            <Image 
             src={imag4} 
             alt="" 
-            width={324}
-            height={392}
+            width={347}
+            height={492}
             className="absolute left-[136px] bottom-[120px] "
-            /><Image 
+            />
+            
+            <Image 
             src={imag5} 
             alt="" 
             width={451}
             height={312}
             className="absolute left-[36px] w-[451px] h-[312px] overflow-hidden object-none top-[65px] "
-            /><Image 
+            />
+            
+            <Image 
             src={imag6} 
             alt="" 
             width={290}
             height={348}
             className="absolute object-cover w-[290px] h-[348px] overflow-hidden left-[800px] top-[110px] "
             />
+            
             <Image 
             src={imag7} 
             alt="" 
             width={178}
             height={242}
             className="absolute object-cover bottom-[46px] overflow-hidden left-[800px]  "
-            /><Image 
+            />
+            
+            <Image 
             src={imag8} 
             alt="" 
             width={425}
             height={433}
             className="absolute w-[425px] h-[435px] object-cover top-[23px] left-[1100px] overflow-hidden   "
-            /><Image 
+            />
+            
+            <Image 
             src={imag9} 
             alt="" 
             width={178}
             height={242}
             className="absolute w-[258px] h-[196px] object-cover bottom-[116px] overflow-hidden left-[991px]  "
             />
-
 
             </div>
 

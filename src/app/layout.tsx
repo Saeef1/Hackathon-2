@@ -1,3 +1,4 @@
+import Header from "./header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Montserrat  from "next/font/local";
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} ${poppins.className}antialiased`}
       >
+        <Header/>        
         {children}
         <Footer />
       </body>

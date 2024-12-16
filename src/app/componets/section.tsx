@@ -39,7 +39,7 @@ const SectionList = () => {
                             src={img} alt="living room"
                             height={521}
                             width={782.12}
-                            className={`${object} w-[381px] object-cover overflow-hidden h-[480px]`}
+                            className={`${object} w-[381px] hover:opacity-70 object-cover duration-500 overflow-hidden h-[480px]`}
                         />
                         <h2 className="font-semibold text-[24px]">
                             {title}

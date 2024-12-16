@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 type itemsProps = {
     id: number
@@ -84,6 +85,15 @@ const Products = () => {
             const hid=discount === undefined ? 'hidden' :`flex`;
             return <>
                 <div key={id} className="w-[285px] h-[446px] overflow-hidden relative flex flex-col">
+                    <div className="absolute hover:opacity-[1] opacity-0 hover:bg-opacity-30 bg-opacity-0 w-[285px] h-[446px] duration-300  bg-black flex flex-col items-center z-20 justify-center gap-2">
+                       <Link href="/Product" className="w-[50%]"> <button className="w-[100%] py-2  bg-white">
+                            Add to cart
+                        </button></Link>
+                        <div className="flex text-white list-none gap-5">
+                            <li>share</li>
+                            <li>like</li>
+                        </div>
+                    </div>
                     <Image
                         src={image}
                         alt="furiure"
@@ -112,6 +122,7 @@ const Products = () => {
             </>
         })}
     </>
-}
+};
+
 
 export default Products;

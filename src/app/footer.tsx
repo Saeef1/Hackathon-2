@@ -1,7 +1,8 @@
+import Link from "next/link";
 export default function Footer() {
     return (
       <
-          footer className="border-black border-[1px] py-5">
+          footer className="mb-0 w-[100%] border-black border-[1px] py-5">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div>
@@ -16,24 +17,24 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-[55px] text-gray-400">Links</h3>
             <ul className=" flex flex-col gap-[46px]">
               <li>
-                <a href="/home" className="text-black hover:text-yellow-500">
+                <Link href="/home" className="text-black hover:text-yellow-500">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/shop" className="text-black hover:text-yellow-500">
+                <Link href="/shop" className="text-black hover:text-yellow-500">
                   Shop
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-black hover:text-yellow-500">
+                <Link href="/about" className="text-black hover:text-yellow-500">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-black hover:text-yellow-500">
+                <Link href="/contact" className="text-black hover:text-yellow-500">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -21,7 +21,6 @@ export default function Section2(){
                     <Image src="/sofa/sofa3.png" alt="sofa"
                     width={828}
                     height={651}
-                   
                    objectPosition="center"
                     className=" absolute bottom-12 right-5 object-none overflow-hidden"
                      />

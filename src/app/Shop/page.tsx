@@ -1,5 +1,3 @@
-import shopBg from "../../../public/shop.jpeg"
-import Image from "next/image"
 import  Sec from "../Shop/sec"
 import  Sec2 from "../Shop/sec2"
 import  Heading from "../componets/Title" 

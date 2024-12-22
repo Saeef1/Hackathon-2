@@ -2,8 +2,8 @@ import Image from "next/image"
 export default function Sec2() {
 
     return <>
-        <div className="w-[100%] py-[100px] bg-[#FAF3EA] flex justify-center">
-            <div className="w-[1334px] h-[70px] flex flex-wrap justify-between">
+        <div className="w-[100%] sm:py-[100px] py-[60px] bg-[#FAF3EA] flex justify-center">
+            <div className="w-[1334px] h-auto gap-5 flex flex-wrap justify-center sm:justify-between">
                 <div className="flex gap-1">
                     <Image src="/svgs/trophy.svg" alt=""
                         width={52}

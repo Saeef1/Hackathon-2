@@ -7,17 +7,17 @@ import Link from "next/link"
 export default function Cart() {
 
     return <>
-        <div className="w-[100%] flex flex-col items-center text-base font-medium  ">
+        <div className="w-[100%] flex flex-col items-center sm:text-base text-[10px] font-medium  ">
             <Heading
                 title={`Cart`}
                 logo={``} />
-            <div className="w-[1440px] h-[526px] flex justify-center items-center">
-                <div className="flex flex-wrap gap-8">
-                    <div className="w-[817px] h-[215px] font-normal grid grid-cols-7  ">
+            <div className="w-[100%] h-auto sm:h-[526px] gap-7 flex justify-center items-center">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start m-5 gap-8">
+                    <div className="sm:w-[817px] w-[640px] h-[215px] font-normal grid grid-cols-7  ">
                         <div className="bg-[#F9F1E7] row-start-1 col-start-1 -z-10 w-[100%] h-[55px] col-span-7"></div>
                         <p className="col-start-2 row-start-1 font-medium my-4">Product</p> <p className="col-start-3 font-medium row-start-1 my-4">Price</p>
                         <p className="col-start-5 font-medium row-start-1 my-4">Quantity</p> <p className="col-start-6 font-medium row-start-1 my-4">Subtotal</p>
-                        <div className="size-[107px] col-start-1 mt-[55px] bg-[#f9f1e7]">
+                        <div className="size-[107px] hidden sm:inline-block col-start-1 mt-[55px] bg-[#f9f1e7]">
                             <Image src={img2} alt="sofa"
                                 width={111}
                                 height={90}
@@ -25,7 +25,7 @@ export default function Cart() {
                                 className="mt-3 mr-2"
                             />
                         </div>
-                        <p className="text-[#9F9F9F] mt-[95px] ">Asgaard sofa</p>  <p className="text-[#9F9F9F] mt-[95px] ">Rs. 250,000.00</p>
+                        <p className="text-[#9F9F9F] col-start-2 mt-[95px] ">Asgaard sofa</p>  <p className="text-[#9F9F9F] mt-[95px] ">Rs. 250,000.00</p>
                         <button className=" mt-[95px] size-8 border-[1px] border-[#9F9F9F] col-start-5">1</button> <p className=" mt-[95px] ">Rs. 250,000.00</p>
 
                         <button className=" mt-[50px] ml-[52px]  ">
@@ -34,8 +34,8 @@ export default function Cart() {
                             </svg>
                         </button>
                     </div>
-                    <div className="w-[393px] h-[390px] bg-[#f9f1e7] flex flex-col items-center pt-4  gap-10">
-                        <h1 className="text-[32px] font-semibold leading-6 mb-5">Cart Totals</h1>
+                    <div className="w-[393px] sm:h-[390px] h-auto pb-8 bg-[#f9f1e7] flex flex-col items-center pt-4  gap-10">
+                        <h1 className="sm:text-[32px] text-[16px] font-semibold leading-6 mb-5">Cart Totals</h1>
                         <div className="flex flex-col gap-8">
                             <div className="flex gap-[62px]">
                                 <p className="">Subtotal</p>

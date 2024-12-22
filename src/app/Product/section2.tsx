@@ -1,14 +1,14 @@
 import Image from "next/image"
 export default function Section2(){
     return <>
-    <div className="w-[1440px] h-auto flex flex-col items-center py-11 gap-9 text-[#9f9f9f] border-[#d9d9d9] border-[1px]">
-        <div className="w-[649px] text-2xl font-medium flex flex-warp justify-between">
+    <div className="sm:w-[1440px] w-[100%] h-auto flex flex-col items-center py-11 gap-9 text-[#9f9f9f] border-[#d9d9d9] border-[1px]">
+        <div className="sm:w-[649px] w-[100%] text-2xl gap-5 font-medium flex sm:flex-row flex-col items-center justify-between">
             <p className="hover:text-black">Description</p>
             <p className="hover:text-black">Additional Information</p>
-            <p className="hover:text-black">Reviews [5]</p>
+            <p className="hover:text-black">Reviews[5]</p>
         </div>
 
-        <div className="w-[1039px] h-[174px] flex flex-col justify-between">
+        <div className="sm:w-[1039px] w-[100%] sm:h-[174px] h-auto flex gap-6 px-4 sm:px-0 flex-col justify-between">
             <p>
             Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
             </p>
@@ -21,8 +21,7 @@ export default function Section2(){
                     <Image src="/sofa/sofa3.png" alt="sofa"
                     width={828}
                     height={651}
-                   
-                   objectPosition="center"
+                    objectPosition="center"
                     className=" absolute bottom-12 right-5 object-none overflow-hidden"
                      />
                 </div>

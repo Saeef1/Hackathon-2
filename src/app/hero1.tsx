@@ -1,17 +1,17 @@
 import Image from "next/image";
 export default function Hero1(){
     return<>
-    <div className="relative h-[900.93px] w-[1440px] overflow-hidden">
+    <div className=" relative h-[900.93px] w-[100%] sm:w-[1440px] overflow-hidden">
         <Image 
         src="/bg1.jpeg"
         alt="hero" 
         width={1440}
-        height={1007.93}
-        className="-z-10 overflow-hidden"
+        height={900.93}
+        className="-z-10 h-[900.93] sm:h-[1007.93px]  overflow-hidden"
         />
 
-        <div className="absolute right-[58px] flex-col flex items-center justify-center top-[153px] z-10 w-[643px] h-[443px] rounded-[10px] pb-[37px] bg-[#FFF3E3]">
-            <div className="w-[561px] h-[344px] flex-col flex items-center  gap-[46px]">
+        <div className="absolute right-[58px] flex-col flex items-center justify-center top-[153px] z-10 sm:w-[643px] w-[100%] h-auto p-16 sm:p-0 sm:h-[443px] rounded-[10px] pb-[37px] bg-[#FFF3E3]">
+            <div className="sm:w-[561px] w-[100%] h-[344px] flex-col flex items-center  gap-[46px]">
                 <div className="w-[] h-[]">
                     <h3 className="font-bold text-[16px] tracking-[3px] leading-[24px]">
                     New Arrival
@@ -19,7 +19,7 @@ export default function Hero1(){
                     <h2 className="font-bold text-[52px] text-[#B88E2F] leading-[65px]">
                     Discover Our New Collection
                     </h2>
-                    <p className="font-medium text-[18px]">
+                    <p className="font-medium text-[18px] flex flex-wrap  ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
                     </p>
                 </div>

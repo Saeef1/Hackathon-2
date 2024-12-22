@@ -10,7 +10,7 @@ import imag8 from "../../public/fur/img8.png"
 import imag9 from "../../public/fur/img9.png"
 export default function Hero4() {
     return <>
-        <div className="m-[69px] bg-[#FCF8F3] w-[1440px] flex justify-center overflow-hidden">
+        <div className="m-[69px] bg-[#FCF8F3] w-[1440px] hidden sm:flex justify-center overflow-hidden">
             <div className="w-[1799px] h-[780px] flex items-center m-[50px] justify-center relative">
                 <div className="absolute -top-[45px] flex flex-col items-center gap-2">
                 <h3>Share your setup with</h3>

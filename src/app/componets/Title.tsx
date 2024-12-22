@@ -8,7 +8,7 @@ type headProp ={
 
 const Heading = ({title, logo}:headProp)=>{
     return <>
-        <div className="w-[1439px] h-[315px] overflow-hidden flex flex-col justify-center items-center">
+        <div className="sm:w-[1439px] w-[100%]  h-[315px] overflow-hidden flex flex-col justify-center items-center">
             <Image
                 src={shopBg}
                 alt=""

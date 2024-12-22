@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import Sec from "../Shop/sec"
 import Sec2 from "../Shop/sec2"
 import Heading from "../componets/Title"
-=======
-import  Sec from "../Shop/sec"
-import  Sec2 from "../Shop/sec2"
-import  Heading from "../componets/Title" 
-
->>>>>>> 3b256053a60fe0dfe4bed8869da360d17d1a75c6
 export default function Shop() {
         return <>
                 <div className="w-[100%] flex flex-col items-center text-base font-medium  ">

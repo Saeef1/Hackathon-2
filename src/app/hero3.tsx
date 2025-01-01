@@ -16,40 +16,40 @@ export default function Hero3() {
         </div>
         <div className="m-[69px] bg-[#FCF8F3] sm:w-[1440px] w-[100%] sm:overflow-hidden h-auto ">
             <div className="sm:w-[1780px] sm:h-[670px] h-auto sm:relative">
-                <div className="sm:w-[422px] h-auto w-full sm:absolute left-[100px] sm:top-[223px]">
-                    <h1 className="text-[40px] font-bold leading-[48px]">
+                <div className="sm:w-[422px] h-auto w-full text-center sm:text-left sm:absolute left-[100px] sm:top-[223px]">
+                    <h1 className="sm:text-[40px] text-2xl font-bold sm:leading-[48px]">
                         50+ Beautiful rooms
                         inspiration
                     </h1>
                     <p className="mt-[7px] mb-[27px] text-[#616161] ">
                         Our designer already made a lot of beautiful prototipe of rooms that inspire you
                     </p>
-                    <button className="w-[175px] h-[48px] font-semibold text-[16px] text-white flex items-center justify-center bg-[#B88E2F]">Explore More</button>
+                    <button className="sm:w-[175px] w-[400px] h-[48px] font-semibold sm:text-[16px] text-xs text-white bg-[#B88E2F]">Explore More</button>
                 </div>
-                <div className="sm:w-[1196px] w-full sm:h-[582px] h-auto my-[44px] flex flex-col sm:flex-row gap-6 right-px sm:absolute">
+                <div className="sm:w-[1196px] w-full sm:h-[582px] h-auto my-[44px] flex flex-col p-11 sm:p-0 sm:flex-row gap-6 right-px sm:absolute">
                     <Image
                         src={imge1}
                         alt="rooms"
-                        width={404}
-                        height={582}
-                        className=""
+                        width={204}
+                        height={282}
+                        className="sm:w-[404px] sm:h-[582px] object-cover"
                     />
                     <Image
                         src={imge2}
                         alt="rooms"
                         width={404}
                         height={486}
-                        className="w-[604px] h-[486px] overflow-hidden object-cover"
+                        className="sm:w-[604px] sm:h-[486px] overflow-hidden object-cover"
                     />
                     <Image
                         src={imge3}
                         alt="rooms"
                         width={404}
                         height={486}
-                        className="w-[604px] h-[486px] overflow-hidden object-cover"
+                        className="sm:w-[604px] sm:h-[486px] overflow-hidden object-cover"
                     />
 
-                    <div className="w-[217px] z-10 h-[130px] absolute bg-white bg-opacity-70 flex flex-col items-center justify-center gap-2 left-[38px] bottom-[28px]">
+                    <div className="w-[217px] z-10 h-[130px] absolute bg-white bg-opacity-70 flex flex-col items-center justify-center gap-2 left-[38px] sm:bottom-[28px]">
 
                         <div className="flex items-center">
                             <h3>01</h3>
@@ -60,7 +60,7 @@ export default function Hero3() {
 
                     </div>
 
-                    <div className="absolute left-[256px] bottom-[28px] size-12 bg-[#B88E2F] flex items-center justify-center">
+                    <div className="absolute left-[256px] sm:bottom-[28px] size-12 bg-[#B88E2F] flex items-center justify-center">
                         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 7H1M19 7L13 1M19 7L13 13" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>

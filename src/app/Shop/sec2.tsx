@@ -10,20 +10,21 @@ export default function Sec2() {
                         height={60}
                     />
                     <div>
-                        <h1 className="text-2xl leading-[37.5px] font-semibold">High Quality</h1>
+                        <h1 className="sm:text-2xl text-base sm:leading-[37.5px] font-semibold">High Quality</h1>
 
-                        <p className="text-xl font-medium text-[#898989]">crafted from top materials</p>
+                        <p className="sm:text-xl text-base font-medium text-[#898989]">crafted from top materials</p>
                     </div>
                 </div>
                 <div className="flex gap-1">
                     <Image src="/svgs/tick.svg" alt=""
                         width={52}
                         height={60}
+
                     />
                     <div>
-                        <h1 className="text-2xl leading-[37.5px] font-semibold">Warranty Protection</h1>
+                        <h1 className="sm:text-2xl text-base sm:leading-[37.5px] font-semibold">Warranty Protection</h1>
 
-                        <p className="text-xl font-medium text-[#898989]">Over 2 years</p>
+                        <p className="sm:text-xl text-base font-medium text-[#898989]">Over 2 years</p>
                     </div>
                 </div>
                 <div className="flex gap-1">
@@ -32,9 +33,9 @@ export default function Sec2() {
                         height={60}
                     />
                     <div>
-                        <h1 className="text-2xl leading-[37.5px] font-semibold">Free Shipping</h1>
+                        <h1 className="sm:text-2xl text-base sm:leading-[37.5px] font-semibold">Free Shipping</h1>
 
-                        <p className="text-xl font-medium text-[#898989]">Order over 150 $</p>
+                        <p className="sm:text-xl text-base font-medium text-[#898989]">Order over 150 $</p>
                     </div>
                 </div>
                 <div className="flex gap-1">
@@ -43,9 +44,9 @@ export default function Sec2() {
                         height={60}
                     />
                     <div>
-                        <h1 className="text-2xl leading-[37.5px] font-semibold">24 / 7 Support</h1>
+                        <h1 className="sm:text-2xl text-base sm:leading-[37.5px] font-semibold">24 / 7 Support</h1>
 
-                        <p className="text-xl font-medium text-[#898989]">Dedicated support</p>
+                        <p className="sm:text-xl text-base font-medium text-[#898989]">Dedicated support</p>
                     </div>
                 </div>
             </div>

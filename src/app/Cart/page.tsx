@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function Cart() {
 
     return <>
-        <div className="w-[100%] flex flex-col items-center sm:text-base text-[10px] font-medium  ">
+        <div className="w-[100%] flex flex-col items-center sm:text-base text-[10px] font-[poppins] font-medium  ">
             <Heading
                 title={`Cart`}
                 logo={``} />

@@ -50,10 +50,10 @@ export default function Section() {
                     </div>
 
                     <div className="sm:w-[606px] w-[100%] h-auto flex flex-col items-center sm:items-start ">
-                        <h1 className="text-[42px] leading-[62px]">
+                        <h1 className="sm:text-[42px] text-2xl sm:leading-[62px]">
                             Asgaard sofa
                         </h1>
-                        <p className="text-2xl text-[#9F9F9F]">
+                        <p className="sm:text-2xl text-xs text-[#9F9F9F]">
                             Rs. 250,000.00
                         </p>
                         <div className=" my-4 flex gap-[6px] items-center  ">
@@ -92,18 +92,18 @@ export default function Section() {
                                     <div className="size-[30px] bg-[#B88E2F] rounded-full"></div>
                                 </div>
                             </div>
-                            <div className="my-5 flex flex-col sm:flex-row gap-3">
-                                <div className="w-[123px] h-[64px] text-black rounded-[10px] border-[#9F9F9F] border-[1px] flex items-center justify-around">
+                            <div className="my-5 flex flex-row sm:gap-3 gap-1">
+                                <div className="w-[123px] sm:h-[64px] h-[38px] text-black rounded-[10px] border-[#9F9F9F] border-[1px] flex items-center justify-around">
                                     <button>-</button>
                                     <p>1</p>
                                     <button>+</button>
                                 </div>
-                                <Link href="/Cart"><button className="w-[215px] h-[64px] text-black rounded-[15px] border-black border-[1px] ">
-                                    <p className="text-xl   ">Add To Cart</p>
+                                <Link href="/Cart"><button className="sm:w-[215px] w-[123px] sm:h-[64px] h-[38px] text-black rounded-[15px] border-black border-[1px] ">
+                                    <p className="sm:text-xl text-xs  ">Add To Cart</p>
                                 </button></Link>
-                                <div className="w-[215px] h-[64px] text-black gap-[10px] rounded-[15px] border-black border-[1px] flex items-center justify-center">
+                                <div className="sm:w-[215px] w-[123px] sm:h-[64px] h-[38px] text-black gap-[10px] rounded-[15px] border-black border-[1px] flex items-center justify-center">
                                     <p className="text-xl">+</p>
-                                    <p className="text-xl">Compare</p>
+                                    <p className="sm:text-xl text-xs ">Compare</p>
                                 </div>
                             </div>
                             <div className="my-10 w-[100%] h-px border-[#D9D9D9] border-[1px]"></div>

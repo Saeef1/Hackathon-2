@@ -3,7 +3,7 @@ import Section from "./section"
 import Section2 from "./section2"
 export default function Product() {
     return <>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center font-[poppins]">
             <div className="w-[100%] bg-[#F9F1E7] h-[100px] px-[100px] text-[16px] flex items-center justify-center  sm:justify-between">
                 <div className="gap-6 flex">
                     <div className="border-black items-center flex gap-[14px]">

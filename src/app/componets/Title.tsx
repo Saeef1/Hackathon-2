@@ -6,7 +6,7 @@ type headProp ={
     logo:string
 }  
 
-const Heading = ({title, logo}:headProp)=>{
+const Heading = ({title, logo=''}:headProp)=>{
     return <>
         <div className="sm:w-[1439px] w-[100%]  h-[315px] overflow-hidden flex flex-col justify-center items-center">
             <Image
@@ -19,14 +19,14 @@ const Heading = ({title, logo}:headProp)=>{
             <Image
                 src={logopg}
                 alt="logo"
-                width={50}
-                height={32}
+                width={77}
+                height={77}
                 className={ `${logo} object-none size-[77px]`}
             />
-            <h1 className="text-[48px] font-medium leading-[72px]">{title}</h1>
+            <h1 className="sm:text-[48px] text-3xl font-medium sm:leading-[72px]">{title}</h1>
             <div className=" w-[121px] flex justify-between ">
                 <p>Home</p>
-                <p className="text-[28px]">&#8250;</p>
+                <p className="sm:text-[28px] text-base">&#8250;</p>
                 <p>{title}</p>
             </div>
         </div>

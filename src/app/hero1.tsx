@@ -16,10 +16,10 @@ export default function Hero1(){
                     <h3 className="font-bold text-[16px] tracking-[3px] leading-[24px]">
                     New Arrival
                     </h3>
-                    <h2 className="font-bold text-[52px] text-[#B88E2F] leading-[65px]">
+                    <h2 className="font-bold sm:text-[52px] text-3xl text-[#B88E2F] sm:leading-[65px]">
                     Discover Our New Collection
                     </h2>
-                    <p className="font-medium text-[18px] flex flex-wrap  ">
+                    <p className="font-medium sm:text-[18px] text-xs flex flex-wrap  ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
                     </p>
                 </div>

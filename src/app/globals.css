@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#cartButton:checked~#New{
+    display: inline-block;
+    transition: 100ms; 
+}
+
+#cartButton:checked~.New{
+    display: inline-block;
+    transition: 700ms; 
+    width: 417px;
+    height: 746px;
+}

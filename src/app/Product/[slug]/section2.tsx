@@ -1,6 +1,19 @@
-import Image from "next/image"
-export default function Section2() {
+import Image from "next/image";
+import { PortableText } from "next-sanity";
+import { Dynamic } from "./page";
+export default async function Section2({
+    params,
+}: {
+  params: { slug: string };
+}
+) {
+    const data: slugsProp | null = await Dynamic(params.slug);
+
+  if (!data) {
+    return <div key="none1">ERROR: page not found</div>;
+  } else {
     return <>
+
         <div className="sm:w-[1440px] w-[100%] h-auto flex flex-col items-center py-11 gap-9 text-[#9f9f9f] border-[#d9d9d9] border-[1px]">
             <div className="sm:w-[649px] w-[100%] sm:text-2xl text-base gap-5 font-medium flex sm:flex-row flex-col items-center justify-between">
                 <p className="hover:text-black">Description</p>
@@ -8,13 +21,8 @@ export default function Section2() {
                 <p className="hover:text-black">Reviews[5]</p>
             </div>
 
-            <div className="sm:w-[1039px] w-[100%] sm:h-[174px] h-auto flex gap-6 px-4 sm:px-0 flex-col justify-between">
-                <p>
-                    Embodying the raw, wayward spirit of rock &lsquon&lsquo roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
-                </p>
-                <p>
-                    Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
-                </p>
+            <div className="sm:w-[1039px] w-[100%] h-auto flex gap-6 px-4 sm:px-0 flex-col justify-between">
+                <PortableText value={[{ _type: 'block', children: [{ _type: 'span', text: data.description }] }]} />
             </div>
             <div className="flex items-center flex-wrap gap-[29px]">
                 <div className="w-[605px] relative h-[348px] overflow-hidden bg-[#F9F1E7]">
@@ -34,4 +42,4 @@ export default function Section2() {
             </div>
         </div>
     </>
-};
+}};

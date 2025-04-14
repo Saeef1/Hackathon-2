@@ -10,7 +10,7 @@ const ids = (input: string):string => {
 
 const Details =({title='',space='span-col-2',placeHolder}:detailProps)=>{
   
-   let ID = ids(title)
+        const ID = ids(title)
 
     return (
         <div  key={ID} className={`text-base font-medium ${space}`}>

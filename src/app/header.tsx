@@ -3,8 +3,8 @@ import logo from "../../public/logo.png"
 import acout from "../../public/svgs/acount.svg"
 import search from "../../public/svgs/search.svg"
 import whislidt from "../../public/svgs/whishlist.svg"
-import cart from "../../public/svgs/cart.svg"
 import Link from "next/link" 
+import CartButton from "./Cart/cart"
 
 const Header = () => {
     return (
@@ -52,12 +52,7 @@ const Header = () => {
                         />
                 </button>
 
-                <button>
-                    <Link href="/Cart"><Image
-                        src={cart}
-                        alt="icom"
-                    /></Link>
-                </button>
+                <CartButton />
             </div>
         </div>
     )

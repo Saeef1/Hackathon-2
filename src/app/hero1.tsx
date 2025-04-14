@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 export default function Hero1(){
     return<>
@@ -16,17 +17,19 @@ export default function Hero1(){
                     <h3 className="font-bold text-[16px] tracking-[3px] leading-[24px]">
                     New Arrival
                     </h3>
-                    <h2 className="font-bold sm:text-[52px] text-3xl text-[#B88E2F] sm:leading-[65px]">
+                    <h2 className="font-semibold sm:text-[52px] w-[90%] sm:w-[410px] text-3xl text-[#B88E2F] sm:leading-[65px]">
                     Discover Our New Collection
                     </h2>
-                    <p className="font-medium sm:text-[18px] text-xs flex flex-wrap  ">
+                    <p className="font-medium leading-6 sm:text-[18px] text-xs mt-4 flex flex-wrap  ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
                     </p>
                 </div>
                 <div className="w-[100%]">
+                <Link href="/Shop">
                 <button className="w-[222px] text-[16px] font-bold h-[74px] bg-[#B88E2F] text-[#FFF3E3] py-[25px] px-[72px]">
                 BUY NOW
                 </button>
+                </Link>
                 </div>
             </div>
         </div>

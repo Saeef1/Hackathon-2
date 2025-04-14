@@ -1,9 +1,32 @@
-import Products from "../componets/products"
+import Products from "../../componets/products"
 import Section from "./section"
 import Section2 from "./section2"
-export default function Product() {
+import { client } from "@/sanity/lib/client"
+
+export const Dynamic = async function (slug: string, p0?: { signal: AbortSignal })  {
+    const query: slugsProp = await client.fetch(`*[_type == "product" && slug.current == $slug][0]{  
+        "slug": slug.current,
+        "productImage": productImage.asset->url,
+        _id,
+        title,
+        price,
+        description,
+        tags
+      }`, { slug });
+    return query || null;
+
+}
+
+export default async function Product({params} : {params: {slug: string}}) {
+ 
+    const data:slugsProp|null =await Dynamic(params.slug) ;
+    if (!data) {
+        return <div>ERROR: page not found</div>
+    }
+    else{
     return <>
-        <div className="flex flex-col items-center font-[poppins]">
+
+        <div key={data._id} className="flex flex-col items-center font-[poppins]">
             <div className="w-[100%] bg-[#F9F1E7] h-[100px] px-[100px] text-[16px] flex items-center justify-center  sm:justify-between">
                 <div className="gap-6 flex">
                     <div className="border-black items-center flex gap-[14px]">
@@ -18,13 +41,13 @@ export default function Product() {
                         <p className="text-[28px]">&#8250;</p>
 
                     </div>
-                    <div className="w-[142px] h-[37px] flex items-center justify-end border-l border-black">
-                        Asgaard sofa
+                    <div className="w-max pl-2 h-[37px] flex items-center justify-end border-l border-black">
+                        {data.title}
                     </div>
                 </div>
             </div>
-            <Section />
-            <Section2 />
+            <Section params={{ slug: data.slug }} />
+            <Section2 params={{slug : data.slug}}/>
             <div className="sm:w-[1440px] h-auto sm:h-[777px] flex flex-col items-center justify-center gap-6">
                 <h1 className="font-medium text-[36px]">Related Products</h1>
                 <div className="flex sm:w-[1236px] justify-center h-auto sm:h-[446px] gap-[32px] flex-wrap overflow-hidden ">
@@ -37,4 +60,4 @@ export default function Product() {
             </div>
         </div>
     </>
-}
+    }}

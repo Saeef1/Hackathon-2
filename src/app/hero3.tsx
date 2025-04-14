@@ -7,7 +7,7 @@ export default function Hero3() {
     return <>
         <div className="w-full flex flex-col px-3  items-center gap-[32px]">
             <h1 className="text-[40px] leading-[48px] font-bold">Our Products</h1>
-            <div className="sm:w-[1236px] w-[100%] justify-center mb-8 flex flex-wrap gap-8">
+            <div className="sm:w-[1236px] sm:h-[950px] overflow-hidden w-[100%] justify-center mb-8 flex flex-wrap gap-8">
                 <Products />
             </div>
             <button className="w-[245px] h-[48px] font-semibold text-[18px] text-[#B88E2F] flex items-center justify-center border-[#B88E2F] border-[1px]">

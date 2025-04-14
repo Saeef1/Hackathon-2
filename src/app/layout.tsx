@@ -2,7 +2,7 @@ import Header from "./header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Montserrat  from "next/font/local";
-import Poppins  from "next/font/local";
+import {Poppins}  from "next/font/google";
 import Footer from "./footer";
 import "./globals.css";
 
@@ -10,22 +10,17 @@ const montserrat = Montserrat({
   src:"./fonts/Montserrat/Montserrat-VariableFont_wght.ttf",
   variable:"--font-montserrat",
   weight:"100 900"
-}) 
-const poppins = Poppins({
-  src:"./fonts/Poppo/Poppins-Medium.ttf",
-  variable:"--font-poppins",
-  weight:"100 900"
-}) 
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const geistMono = Poppins({
   variable: "--font-geist-mono",
-  weight: "100 900",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} ${poppins.className}antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}
       >
         <Header/>        
         {children}

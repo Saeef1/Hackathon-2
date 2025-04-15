@@ -7,7 +7,13 @@ import { getProductBySlug } from "../../utils/sanityQueries"
 import { useState, useEffect } from "react"
 import { slugsProp } from "../../interface"
 
-export default function Product({params} : {params: {slug: string}}) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function Product({ params }: PageProps) {
     const [data, setData] = useState<slugsProp | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 

@@ -1,22 +1,10 @@
 import Link from "next/link"
-import {client} from "../../sanity/lib/client"
 import Image from "next/image"
-import { itemsProps } from "../interface";
+import { itemsProps } from "../interface"
+import { getAllProducts } from "../utils/sanityQueries"
 
-
-const Products  = async() => {
-    const query =await `*[_type == "product"]{
-  _id,
-  "productImage" : productImage.asset -> url,
-    title,
-    dicountPercentage,
-    "slug":slug.current,
-    isNew,
-    tags,
-    price ,
-    isNew 
-}`
-    const products = await client.fetch(query)
+const Products = async() => {
+    const products = await getAllProducts();
 
     return <>
         {products.map((items: itemsProps) => {

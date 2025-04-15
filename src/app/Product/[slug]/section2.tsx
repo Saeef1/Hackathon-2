@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { PortableText } from "next-sanity";
-import { Dynamic } from "./page";
+import { getProductBySlug } from "@/app/utils/sanityQueries";
+import { slugsProp } from "@/app/interface";
+
 export default async function Section2({
     params,
 }: {
   params: { slug: string };
 }
 ) {
-    const data: slugsProp | null = await Dynamic(params.slug);
+    const data: slugsProp | null = await getProductBySlug(params.slug);
 
   if (!data) {
     return <div key="none1">ERROR: page not found</div>;

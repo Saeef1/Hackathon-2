@@ -1,7 +1,7 @@
 "use client";
-import { Dynamic } from "../Product/[slug]/page";
 import { useState, useEffect } from "react";
 import { slugsProp } from "../interface";
+import { getProductBySlug } from "../utils/sanityQueries";
 
 export default function QuantityHandle({
   params = { slug: "" },
@@ -21,7 +21,7 @@ export default function QuantityHandle({
         const timeoutId = setTimeout(() => controller.abort(), 5000); // Reduced timeout to 5 seconds
 
         try {
-          const result = await Dynamic(params.slug || "");
+          const result = await getProductBySlug(params.slug || "");
           clearTimeout(timeoutId);
           setData(result);
           

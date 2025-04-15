@@ -1,26 +1,11 @@
 import Products from "../../componets/products"
 import Section from "./section"
 import Section2 from "./section2"
-import { client } from "@/sanity/lib/client"
-import { slugsProp } from "@/app/interface"
-
-export const Dynamic = async function (slug: string)  {
-    const query: slugsProp = await client.fetch(`*[_type == "product" && slug.current == $slug][0]{  
-        "slug": slug.current,
-        "productImage": productImage.asset->url,
-        _id,
-        title,
-        price,
-        description,
-        tags
-      }`, { slug });
-    return query || null;
-
-}
+import { getProductBySlug } from "../../utils/sanityQueries"
 
 export default async function Product({params} : {params: {slug: string}}) {
  
-    const data:slugsProp|null =await Dynamic(params.slug) ;
+    const data = await getProductBySlug(params.slug);
     if (!data) {
         return <div>ERROR: page not found</div>
     }

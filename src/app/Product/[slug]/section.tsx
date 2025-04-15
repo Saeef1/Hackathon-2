@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Dynamic } from "./page";
+import { getProductBySlug } from "@/app/utils/sanityQueries";
 import QuantityHandle from "@/app/componets/quantityButton";
 import { useState, useEffect } from "react";
 import { slugsProp } from "@/app/interface";
 import { CartItem } from "@/app/interface";
-
 
 export default function Section({
   params,
@@ -20,7 +19,7 @@ export default function Section({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await Dynamic(params.slug);
+        const result = await getProductBySlug(params.slug);
         setData(result);
       } catch (error) {
         console.error('Error fetching product:', error);

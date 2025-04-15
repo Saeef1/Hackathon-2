@@ -10,7 +10,7 @@ export default function QuantityHandle({
   const maxQuantity = 10;
   const [quantity, setQuantity] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<slugsProp | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function QuantityHandle({
         const timeoutId = setTimeout(() => controller.abort(), 5000); // Reduced timeout to 5 seconds
 
         try {
-          const result = await Dynamic(params.slug || "", { signal: controller.signal });
+          const result = await Dynamic(params.slug || "");
           clearTimeout(timeoutId);
           setData(result);
           
@@ -29,11 +29,11 @@ export default function QuantityHandle({
             setQuantity(JSON.parse(saved));
           }
           setIsLoading(false);
-        } catch (err: any) {
+        } catch (err: unknown) {
           clearTimeout(timeoutId);
           
           // Retry logic for timeout errors
-          if (err.name === "AbortError" && retryCount < 2) {
+          if (err instanceof Error && err.name === "AbortError" && retryCount < 2) {
             console.log(`Retrying fetch (attempt ${retryCount + 1})...`);
             await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
             return fetchData(retryCount + 1);
@@ -41,11 +41,11 @@ export default function QuantityHandle({
           
           throw err;
         }
-      } catch (err: any) {
-        if (err.name === "AbortError") {
+      } catch (err: unknown) {
+        if (err instanceof Error && err.name === "AbortError") {
           setError("Request timed out after multiple attempts. Please check your connection and try again.");
         } else {
-          setError(`An error occurred while fetching data: ${err.message}`);
+          setError(`An error occurred while fetching data: ${err instanceof Error ? err.message : 'Unknown error'}`);
         }
         setIsLoading(false);
       }

@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Dynamic } from "./page";
 import QuantityHandle from "@/app/componets/quantityButton";
 import { useState, useEffect } from "react";
+
+
 
 export default function Section({
   params,
@@ -49,8 +50,7 @@ export default function Section({
       }
 
       // Check if item already exists in cart
-      const existingItemIndex = existingCart.findIndex((item: any) => item.id === data._id);
-
+      const existingItemIndex = existingCart.findIndex((item: CartItem) => item.id === data._id);
       if (existingItemIndex !== -1) {
         // Update quantity if item exists
         existingCart[existingItemIndex].quantity += currentQuantity;

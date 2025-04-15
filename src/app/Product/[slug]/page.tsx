@@ -3,7 +3,7 @@ import Section from "./section"
 import Section2 from "./section2"
 import { client } from "@/sanity/lib/client"
 
-export const Dynamic = async function (slug: string, p0?: { signal: AbortSignal })  {
+export const Dynamic = async function (slug: string)  {
     const query: slugsProp = await client.fetch(`*[_type == "product" && slug.current == $slug][0]{  
         "slug": slug.current,
         "productImage": productImage.asset->url,

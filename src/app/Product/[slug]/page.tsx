@@ -7,10 +7,11 @@ import { getProductBySlug } from "../../utils/sanityQueries"
 import { useState, useEffect } from "react"
 import { slugsProp } from "../../interface"
 
-interface PageProps {
+type PageProps = {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default function Product({ params }: PageProps) {

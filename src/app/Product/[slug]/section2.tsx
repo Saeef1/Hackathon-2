@@ -1,21 +1,43 @@
+"use client";
+
 import Image from "next/image";
 import { PortableText } from "next-sanity";
 import { getProductBySlug } from "@/app/utils/sanityQueries";
 import { slugsProp } from "@/app/interface";
+import { useState, useEffect } from "react";
 
-export default async function Section2({
+export default function Section2({
     params,
 }: {
   params: { slug: string };
-}
-) {
-    const data: slugsProp | null = await getProductBySlug(params.slug);
+}) {
+    const [data, setData] = useState<slugsProp | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
-  if (!data) {
-    return <div key="none1">ERROR: page not found</div>;
-  } else {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const result = await getProductBySlug(params.slug);
+                setData(result);
+            } catch (error) {
+                console.error('Error fetching product:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [params.slug]);
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (!data) {
+        return <div key="none1">ERROR: page not found</div>;
+    }
+
     return <>
-
         <div className="sm:w-[1440px] w-[100%] h-auto flex flex-col items-center py-11 gap-9 text-[#9f9f9f] border-[#d9d9d9] border-[1px]">
             <div className="sm:w-[649px] w-[100%] sm:text-2xl text-base gap-5 font-medium flex sm:flex-row flex-col items-center justify-between">
                 <p className="hover:text-black">Description</p>
@@ -44,4 +66,4 @@ export default async function Section2({
             </div>
         </div>
     </>
-}};
+}

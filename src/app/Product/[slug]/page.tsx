@@ -58,8 +58,8 @@ export default function Product({ params }: PageProps) {
                     </div>
                 </div>
             </div>
-            <Section params={{ slug: data.slug }} />
-            <Section2 params={{slug : data.slug}}/>
+            <Section params={{ slug: params.slug }} />
+            <Section2 params={{slug : params.slug}}/>
             <div className="sm:w-[1440px] h-auto sm:h-[777px] flex flex-col items-center justify-center gap-6">
                 <h1 className="font-medium text-[36px]">Related Products</h1>
                 <div className="flex sm:w-[1236px] justify-center h-auto sm:h-[446px] gap-[32px] flex-wrap overflow-hidden ">

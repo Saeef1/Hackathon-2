@@ -1,4 +1,4 @@
-interface slugsProp {
+export interface slugsProp {
     _id:string
     slug: string
     productImage: string
@@ -8,7 +8,7 @@ interface slugsProp {
     tags:string[]
 }
 
-interface itemsProps {
+export interface itemsProps {
     _id: string
     slug: string
     productImage: string
@@ -19,7 +19,7 @@ interface itemsProps {
     isNew?: boolean
 
 }
-interface CartItem {
+export interface CartItem {
     id: string;
     name: string;
     price: number;

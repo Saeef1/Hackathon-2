@@ -2,6 +2,7 @@ import Products from "../../componets/products"
 import Section from "./section"
 import Section2 from "./section2"
 import { client } from "@/sanity/lib/client"
+import { slugsProp } from "@/app/interface"
 
 export const Dynamic = async function (slug: string)  {
     const query: slugsProp = await client.fetch(`*[_type == "product" && slug.current == $slug][0]{  

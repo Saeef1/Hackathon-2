@@ -2,6 +2,7 @@
 import Heading from "../componets/Title";
 import Sec2 from "../Shop/sec2";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface CartItem {
   id: string;
@@ -55,11 +56,13 @@ export default function Cart() {
               {cartItems.map((item) => (
                 <div key={item.id} className="grid grid-cols-7 gap-4 items-center w-full py-4 border-b">
                   <div className="col-span-1 flex items-center">
-                    <div className="size-[107px] bg-[#f9f1e7]">
-                      <img
+                    <div className="w-[105px] h-[105px] bg-[#F9F1E7] rounded-[10px] flex items-center justify-center">
+                      <Image
                         src={item.image}
                         alt={item.name}
-                        className="object-cover w-full h-full"
+                        width={105}
+                        height={105}
+                        className="object-cover"
                       />
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 "use client";
 import { Dynamic } from "../Product/[slug]/page";
 import { useState, useEffect } from "react";
+import { slugsProp } from "../interface";
 
 export default function QuantityHandle({
   params = { slug: "" },

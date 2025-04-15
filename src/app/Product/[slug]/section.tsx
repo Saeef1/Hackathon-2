@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Dynamic } from "./page";
 import QuantityHandle from "@/app/componets/quantityButton";
 import { useState, useEffect } from "react";
-
+import { slugsProp } from "@/app/interface";
+import { CartItem } from "@/app/interface";
 
 
 export default function Section({
